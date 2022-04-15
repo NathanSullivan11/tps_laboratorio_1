@@ -1,0 +1,22 @@
+
+
+float aplicarDescuento(float precio, int descuento){
+
+	float precioDescontado;
+
+	precioDescontado = precio - (precio * descuento/100);
+
+	return precioDescontado;
+
+}
+
+float aplicarAumento(float precio, int aumento){
+
+	float precioAumentado;
+
+	precioAumentado = precio + (precio * aumento/100);
+
+	return precioAumentado;
+}
+
+

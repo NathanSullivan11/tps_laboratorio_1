@@ -1,0 +1,57 @@
+
+#include <stdio.h> // LIBRERIA PARA PODER USAR EL PRINTF EN LA FUNCION mostrasCalculos()
+
+// Desarrollo del cuerpo de las funciones
+
+double pesosABitcoin(float pesosArg, float valorBitcoin){
+
+	double precioEnBitcoin;
+
+	precioEnBitcoin = pesosArg/valorBitcoin;
+
+	return precioEnBitcoin;
+}
+
+float calcularUnitario(float precio, float km){
+
+	float precioUnitario;
+
+	precioUnitario = precio/km;
+
+	return precioUnitario;
+}
+
+float calcularDiferencia(float numero1, float numero2){
+
+	float diferencia;
+
+	diferencia = numero1 - numero2;
+	if(diferencia < 0)
+	{
+		diferencia = diferencia + (diferencia*(-2));
+	}
+	return diferencia;
+}
+
+int mostrarCalculos(float x, float y, float z, float a_Aero, float a_Latam, float b_Aero, float b_Latam, double c_Aero, double c_Latam, float d_Aero, float d_Latam, float dif){
+
+	printf("\nKMs Ingresados: %.2f km\n", x);
+	printf("\nPrecio Aerolíneas: $ %.2f", y);
+	printf("\na) Precio con tarjeta de débito: $ %.2f", a_Aero);
+	printf("\nb) Precio con tarjeta de crédito: $ %.2f", b_Aero);
+	printf("\nc) Precio pagado con bitcoin: %lf BTC", c_Aero);
+	printf("\nd) Precio unitario: $ %.2f\n", d_Aero);
+
+	printf("\nPrecio Latam: $ %.2f", z);
+	printf("\na) Precio con tarjeta de débito: $ %.2f", a_Latam);
+	printf("\nb) Precio con tarjeta de crédito: $ %.2f", b_Latam);
+	printf("\nc) Precio pagado con bitcoin: %lf BTC", c_Latam);
+	printf("\nd) Precio unitario: $ %.2f\n", d_Latam);
+	printf("\nLa diferencia de precio es: $ %.2f\n", dif);
+
+
+
+	return 0;
+}
+
+

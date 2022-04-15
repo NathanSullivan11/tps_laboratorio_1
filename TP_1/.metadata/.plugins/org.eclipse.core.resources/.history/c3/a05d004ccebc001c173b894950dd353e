@@ -1,0 +1,36 @@
+/*
+ * operaciones_numericas.h
+ *
+ *  Created on: 12 abr. 2022
+ *      Author: DESKTOP
+ */
+
+#ifndef OPERACIONES_ARITMETICAS_H_
+#define OPERACIONES_ARITMETICAS_H_
+
+float dividir(float dividendo, float divisor);
+/// @brief Calcular una division, recibiendo como parametro los valor a dividir
+/// @param divisor = es el precio total ingresado por teclado
+/// @param dividendo = el total de km recorridos ingresado por teclado
+/// @return float = ya que al aplicar descuento el resutlado es un float
+
+float calcularDiferencia(float numero1, float numero2);
+/// @brief Calcula la diferencia entre 2 numeros (es indiferente el orden de la resta, siempre va a dar un valor positivo)
+/// @param numero1 = numero al que se le va a restar el numero2
+/// @param numero2 = numero que se le resta al numero1
+/// @return float = ya que al dividir y multiplicar, el resultado es de tipo float
+
+float aplicarDescuento(float precio, int descuento);
+/// @brief Aplica un descuento a un valor determinado
+/// @param precio = valor al que se le aplicara un descuento
+/// @param descuento = el porcentaje descuento a aplicar
+/// @return float = ya que al aplicar un descuento el resultado se convierte a float, mediante (float)
+
+float aplicarAumento(float precio, int aumento);
+/// @brief Aplica un aumento a un valor determinado
+/// @param precio = valor al que se le aplicara un aumento
+/// @param aumento = el porcentaje aumento a aplicar
+/// @return float = ya que al aplicar un aumento el resultado se convierte a float, mediante (float)
+
+
+#endif /* OPERACIONES_ARITMETICAS_H_ */

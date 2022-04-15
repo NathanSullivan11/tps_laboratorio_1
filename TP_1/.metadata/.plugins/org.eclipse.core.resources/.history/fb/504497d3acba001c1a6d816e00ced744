@@ -1,0 +1,27 @@
+/*
+ * operaciones_numericas.c
+ *
+ *  Created on: 12 abr. 2022
+ *      Author: DESKTOP
+ */
+
+float dividir(float precio, float km){
+
+	float precioUnitario;
+
+	precioUnitario = precio/km;
+
+	return precioUnitario;
+}
+
+float calcularDiferencia(float numero1, float numero2){
+
+	float diferencia;
+
+	diferencia = numero1 - numero2;
+	if(diferencia < 0)
+	{
+		diferencia = diferencia + (diferencia*(-2));
+	}
+	return diferencia;
+}

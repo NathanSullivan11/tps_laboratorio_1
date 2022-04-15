@@ -1,0 +1,23 @@
+/*
+ * ingreso_de_datos.h
+ *
+ *  Created on: 4 abr. 2022
+ *      Author: DESKTOP
+ */
+
+#ifndef INGRESO_DE_DATOS_H_
+#define INGRESO_DE_DATOS_H_
+
+float get_FlotantePositivo(char * mensaje, char * mensajeError);
+/// @brief Pide un numero flotante positivos
+/// @param mensaje = recibe como parametro una cadena para mostrar al momento de pedir el numero
+/// @param mensajeError = en caso de que no sea positivo, muestro por pantalla este mensaje
+/// @return float = ya que es lo que la funcion pide
+
+char get_Caracter(char * mensaje, char * mensajeError);
+/// @brief Pide un caracter y valñida que se haya ingresado uno solo
+/// @param  mensaje = recibe como parametro una cadena para mostrar al momento de pedir el caracter
+/// /// @param mensajeError = muestro el mensajeError en caso de que no sea un caracter o si es que ingreso mas de 1 caracter
+/// @return char = ya que es lo que se pide
+
+#endif /* INGRESO_DE_DATOS_H_ */

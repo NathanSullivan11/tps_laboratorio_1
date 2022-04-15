@@ -1,0 +1,27 @@
+/*
+ * operaciones_numericas.c
+ *
+ *  Created on: 12 abr. 2022
+ *      Author: DESKTOP
+ */
+
+float dividir(float dividendo, float divisor){
+
+	float resultado;
+
+	resultado = dividendo/divisor;
+
+	return resultado;
+}
+
+float calcularDiferencia(float valor1, float valor2){
+
+	float diferencia;
+
+	diferencia = valor1 - valor2;
+	if(diferencia < 0)
+	{
+		diferencia = diferencia + (diferencia*(-2));
+	}
+	return diferencia;
+}
