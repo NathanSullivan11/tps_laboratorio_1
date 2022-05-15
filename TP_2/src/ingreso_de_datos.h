@@ -84,17 +84,22 @@ char validarCharDosOpciones(char* mensaje, char caracter, char opcion1, char opc
  */
 int validarNumero(char* auxiliar);
 /**
- *
- * @param auxiliar
- * @return
+ * @brief Valida que una cadena sea unicamente de letras
+ * @param auxiliar Cadena a validar
+ * @return Devuelve 1 si la cadena es toda de letras, 0 no es toda de letras y -1 si la cadena recibida == NULL
  */
 int validarCadenaCaracteres(char* auxiliar);
 /**
- *
- * @param auxiliar
- * @return
+ * @brief Valida que el numero ingresado contenga 1 '.' como mucho
+ * @param auxiliar Auxiliar
+ * @return Devuelve 1 si la cadena es ncorrecta, 0 no es correcta y -1 si la cadena recibida == NULL
  */
 int validarFlotante(char* auxiliar);
+/**
+ * @brief Pide el ingreso de un nro flotante y lo valida
+ * @param mensaje Mensaje a imprimir al momento del pedido
+ * @return Devuelve el numero validado
+ */
 float get_Float(char* mensaje);
 
 

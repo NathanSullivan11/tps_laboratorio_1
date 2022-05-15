@@ -93,10 +93,10 @@ Passenger promptPassenger(flyCodeStatusFlight* listPassenger, int lenPassenger, 
  */
 int promptFlyCodeStatusFlight(flyCodeStatusFlight* list, int len, char* flyCode);
 /**
- *
- * @param list
- * @param len
- * @return
+ * @brief Pide el ingreso del tipo de pasajero
+ * @param list List a recorrer
+ * @param len Tamaño de la lista
+ * @return Devuelve el nro de tipo de pasajero
  */
 int promptTypePassenger(typePassenger* list, int len);
 /**
@@ -106,9 +106,9 @@ int promptTypePassenger(typePassenger* list, int len);
  */
 void listFlyCodeStatusFlight(flyCodeStatusFlight* list, int len);
 /**
- *
- * @param list
- * @param len
+ * @brief Muestra un listado de los tipos de pasajeros
+ * @param list Lista a imprimir
+ * @param len Tamaño de la lista
  */
 void listTypePassengers(typePassenger* list, int len);
 /**
@@ -131,10 +131,10 @@ int removePassenger(Passenger* list, int len, int id);
  * @brief Se encarga de administrar la opcion informando, llamando a las funciones adecuadas
  * @param listPassenger Lista que se pasara como parametro a otras funciones
  * @param lenPassenger Tamaño de la lista pasajeros
- * @param listFlyCode ista que se pasara como parametro a otras funciones
+ * @param listFlyCode lista que se pasara como parametro a otras funciones
  * @param lenFlyCode Tamaño de la lista codigo de vuelos
- * @param listType
- * @param lenType
+ * @param listType Lista que se pasara como parametro a otras funciones
+ * @param lenType Tamaño de la lista tipo de pasajeros
  */
 void informar(Passenger* listPassenger, int lenPassenger, flyCodeStatusFlight* listFlyCode, int lenFlyCode, typePassenger* listType, int lenType);
 /**
@@ -142,8 +142,8 @@ void informar(Passenger* listPassenger, int lenPassenger, flyCodeStatusFlight* l
  * @param list Lista a ordenar
  * @param len Tamaño de la lista
  * @param order Acepta 2 valores, 1 para ordenar de manera ascendente y 0 para ordenar de manera descendente
- * @param listType
- * @param lenType
+ * @param listType Lista que se pasara como parametro a otras funciones
+ * @param lenType Tamaño de la lista tipo de pasajeros
  * @return 0, si funciono correctamente. -1, si la lista == NULL o el tamaño < 0
  */
 int sortPassengers(Passenger* list, int len, int order, typePassenger* listType, int lenType);
@@ -154,8 +154,8 @@ int sortPassengers(Passenger* list, int len, int order, typePassenger* listType,
  * @param order  Acepta 2 valores, 1 para ordenar de manera ascendente y 0 para ordenar de manera descendente
  * @param listFlyCode Lista que se recorrera buscando los estados de vuelos ACTIVO
  * @param lenFlyCode Tamaño de la lista código de vuelo
- * @param listType
- * @param lenType
+ * @param listType Lista que se pasara como parametro a otras funciones
+ * @param lenType Tamaño de la lista tipo de pasajeros
  * @return 0, si funciono correctamente. -1, si la lista == NULL o el tamaño < 0
  */
 int sortPassengersByCode(Passenger* listPassenger, int lenPassenger, int order, flyCodeStatusFlight* listFlyCode, int lenFlyCode, typePassenger* listType, int lenType);
@@ -170,11 +170,11 @@ int sortPassengersByCode(Passenger* listPassenger, int lenPassenger, int order, 
 int printPassengers(Passenger* listPassenger, int lenPassenger, typePassenger* listType, int lenType);
 /**
  * @brief Modifica un atributo de un pasajero de la lista
- * @param listPassenger Lista que e pasara como parametro a las funciones sortPassengers y sortPassengersByCode()
+ * @param listPassenger Lista que se pasara como parametro a las funciones sortPassengers y sortPassengersByCode()
  * @param lenPassenger Tamaño de la lista pasajeros
  * @param index La posicion del pasajero a modificar
  * @param attribute Es el atributo a modificar del elemento de tipo Passenger
- * @param listFlyCode Lista que e pasara como parametro a la funcion sortPassengersByCode()
+ * @param listFlyCode Lista que se pasara como parametro a la funcion sortPassengersByCode()
  * @param lenFlyCode Tamaño de la lista codigo de vuelos
  * @return 0, si se modifico algun pasajero. -1, si la lista == NULL o el tamaño < 0
  */
@@ -185,16 +185,16 @@ int modifyPassenger(Passenger* listPassenger, int lenPassenger, int index, int a
  * @param lenPassenger Tamaño de la lista pasajeros
  * @param listFlyCode Lista que e pasara como parametro a la funcion modifiyPassengers()
  * @param lenFlyCode Tamaño de la lista codigo de vuelos
- * @param listType
- * @param lenType
+ * @param listType LLista que se pasara como parametro a la funcion modifiyPassengers()
+ * @param lenType Tamaño de la lista tipo de pasajeros
  */
 void modificar(Passenger* listPassenger, int lenPassenger, flyCodeStatusFlight* listFlyCode, int lenFlyCode, typePassenger* listType, int lenType);
 /**
  * @brief Pide el ID del pasajero a dar de baja, y luego imprime un mensaje para confirmar la baja.
  * @param list Lista a recorrer buscando la coincidencia de ID
  * @param len Tamaño de la lista
- * @param listType
- * @param lenType
+ * @param listType Lista que se pasara como parametro a otras funciones
+ * @param lenType Tamaño de la lista tipo de pasajeros
  */
 void baja(Passenger* list, int len, typePassenger* listType, int lenType);
 /**
@@ -235,5 +235,11 @@ void printOnePassenger(Passenger pasajero, typePassenger* listType, int lenType)
  * @param lenType Tamaño de la lista tipo de pasajeros
  */
 void printActivePassengers(Passenger* listPassenger, int lenPassenger, flyCodeStatusFlight* listFlyCode, int lenFlyCode, typePassenger* listType, int lenType);
+/**
+ * @brief Pide el ingreso de un nuevo código de vuelo
+ * @param list Lista a la que se le cargara lo pedido
+ * @param len Tamaño de la lista
+ * @param auxFlyCode Es la cadena en la que se cargara el codigo ingresado.
+ */
 void promptNewFlyCode(flyCodeStatusFlight* list, int len, char* auxFlyCode);
 #endif /* ARRAYPASSENGER_H_ */
